@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="218.0" prefWidth="344.0" 
+            xmlns="http://javafx.com/javafx/8.0.111" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="spellcheckergui.FactsController">
+   <children>
+      <ImageView fx:id="rootPane" fitHeight="248.0" fitWidth="349.0" 
+                 layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" 
+                 preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/Help.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="107.0" layoutY="30.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="Our Dictonary Facts" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <TextFlow fx:id="textFlow" layoutX="12.0" layoutY="55.0" 
+                prefHeight="103.0" prefWidth="320.0" />
+      <JFXButton fx:id="mainButton" layoutX="35.0" layoutY="171.0" 
+                 onAction="#mainButtonAction" 
+                 style="-fx-background-color: white;"
+                 stylesheets="@Button.css" text="Main">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="existingButton" layoutX="116.0" layoutY="171.0" 
+                 onAction="#existingButtonAction" 
+                 style="-fx-background-color: white;" 
+                 stylesheets="@Button.css" text="Existing">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="createNewButton" layoutX="219.0" layoutY="171.0" 
+                 onAction="#createNewButtonAction" 
+                 style="-fx-background-color: white;" 
+                 stylesheets="@Button.css" text="Create New">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

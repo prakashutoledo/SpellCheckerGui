@@ -1,0 +1,13 @@
+/* Written By: Prakash Khadka and Tyler Vankainen
+/* Allows user to check the words the whole document as aone and highlights the
+   incorrect words and auto correct to the nearest matched words using hash 
+   table.
+*/
+.jfx-button {
+    -fx-background-color: #039BE5;
+    -fx-text-fill: black; 
+    -fx-border-color: red;
+}
+.jfx-button:hover {
+    -fx-background-color: #388E3C;
+}

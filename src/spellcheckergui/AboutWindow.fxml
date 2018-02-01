@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" 
+            xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="spellcheckergui.AboutWindowController">
+   <children>
+      <Text layoutX="253.0" layoutY="204.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="Version 1.0" 
+            wrappingWidth="114.55711793899536">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="206.0" layoutY="229.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="Author: Prakash Khadka" 
+            wrappingWidth="251.14111328125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="279.0" layoutY="282.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="2017" wrappingWidth="41.4140625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextFlow layoutX="82.0" layoutY="318.0" prefHeight="45.0" 
+                prefWidth="437.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" 
+                  text="All the images are downloaded from Google. 
+Image credit goes to original picture owners and can be removed upon 
+request from them." wrappingWidth="439.8251953125">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Text layoutX="207.0" layoutY="64.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="Spelling Checker">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="106.0" fitWidth="209.0" layoutX="257.0" 
+                 layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/Check.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="206.0" layoutY="253.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="           : Tyler Vankainen" 
+            wrappingWidth="251.14111328125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

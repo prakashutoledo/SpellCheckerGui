@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="600.0" 
+            xmlns="http://javafx.com/javafx/8.0.111" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="spellcheckergui.HelpWindowController">
+   <children>
+      <ImageView fitHeight="391.0" fitWidth="600.0" 
+                 layoutX="-1.0" layoutY="-1.0" 
+                 pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/Help.jpg" />
+         </image>
+      </ImageView>
+      <TextFlow layoutX="143.0" layoutY="24.0" prefHeight="14.0" 
+                prefWidth="315.0" textAlignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" 
+                  text="Inventory Management Help F1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Text layoutX="24.0" layoutY="67.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="Key Combination " />
+      <Text layoutX="24.0" layoutY="88.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="CTRL+N : Invokes New Window " 
+            wrappingWidth="354.3418004512787" />
+      <Text layoutX="24.0" layoutY="162.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="F1 : Invokes Help Window" />
+      <TextFlow layoutX="259.0" layoutY="51.0" prefHeight="102.0" 
+                prefWidth="328.0" textAlignment="JUSTIFY">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" 
+                  text="This program will allow you to check the spelling form 
+the custom file stored in any place in the file directory without worrying their
+ name. There is also option for reading user sentence and paragraph entered 
+into the textfield. " wrappingWidth="331.4140625" />
+         </children>
+      </TextFlow>
+      <TextFlow layoutY="163.0" prefHeight="220.0" prefWidth="600.0"
+                textAlignment="JUSTIFY">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" 
+                  text="The auto currect the incorrectly spelled words with the
+ closest match and option to save edited file into any directory without 
+worrying the file path. User can also use the individual word to check it's 
+spelling and get it's hash value.This program can only read words form text
+ file and can only save documents in .txt format. At this satage other file 
+formats are not supported. All the incorrectly spelled word s are highleted 
+by red fonts followed by black color font if the words are correct. By 
+hitting correct button option words are corrected to closest match which is
+ highlighted by blue color font with in the parenthesis. User can have an 
+option to choose an option from menu bar which consist of settings, from 
+where they can change background color and change the effects in images. 
+Inorder to activate drawer option user have to click on hamburger option 
+in main window followed by secondary window." 
+                  wrappingWidth="578.6502685546875" />
+         </children>
+      </TextFlow>
+      <Text layoutX="22.0" layoutY="108.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="CTRL+E : Invokes Existing  Window" 
+            wrappingWidth="238.6708984375" />
+      <Text layoutX="25.0" layoutY="146.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="ALT+F4 : Exit Window" 
+            wrappingWidth="238.6708984375" />
+      <Text layoutX="24.0" layoutY="128.0" strokeType="OUTSIDE" 
+            strokeWidth="0.0" text="CTRL+H : Invokes Hash Value Window" />
+   </children>
+</AnchorPane>

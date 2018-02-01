@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" maxHeight="-Infinity" 
+            maxWidth="-Infinity" minHeight="-Infinity" 
+            minWidth="-Infinity" prefHeight="378.0" 
+            prefWidth="452.0" style="-fx-background-color: yellow;" 
+            xmlns="http://javafx.com/javafx/8.0.111" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="spellcheckergui.SpellCheckerGuiController">
+   <children>
+      <JFXHamburger fx:id="hamBurger" layoutX="410.0" layoutY="31.0" 
+                    prefHeight="39.0" prefWidth="40.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" layoutY="30.0" 
+                 prefHeight="346.0" prefWidth="91.0" />
+      <MenuBar fx:id="menu" layoutY="-1.0" prefHeight="32.0" prefWidth="450.0"
+               style="-fx-background-color: pink;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newMenuItem" mnemonicParsing="false" 
+                        onAction="#newMenuItemAction" text="Create New   
+   CTRL+N" />
+                  <MenuItem fx:id="openMenuItem" mnemonicParsing="false" 
+                            onAction="#openMenuItemAction" text="Open Existing  
+CTRL+E" />
+                  <MenuItem mnemonicParsing="false" text="Hash Value       
+CTRL+H" />
+                  <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" 
+                            onAction="#exitMenuItemAction" text="Exit         
+          ALT+F4" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Settings">
+               <items>
+                  <Menu mnemonicParsing="false" text="Background Color">
+                     <items>
+                        <CheckMenuItem fx:id="blackMenuEffect" 
+                                       mnemonicParsing="false"
+                                       onAction="#setBackroundBlack"
+                                       text="Black" />
+                        <CheckMenuItem fx:id="blueMenuEffect" 
+                                       mnemonicParsing="false"
+                                       onAction="#setBackroundBlue" 
+                                       text="Blue" />
+                        <CheckMenuItem fx:id="greenMenuEffect" 
+                                       mnemonicParsing="false" 
+                                       onAction="#setBackroundGreen" 
+                                       text="Green" />
+                        <CheckMenuItem fx:id="tealMenuEffect"
+                                       mnemonicParsing="false" 
+                                       onAction="#setBackroundTeal" 
+                                       text="Teal" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Picture Effect">
+                     <items>
+                        <CheckMenuItem fx:id="sepiaToneMenuEffect" 
+                                       mnemonicParsing="false"
+                                       onAction="#setImageSepiaTone"
+                                       text="Sepia Tone" />
+                        <CheckMenuItem fx:id="glowToneMenuEffect"
+                                       mnemonicParsing="false" 
+                                       onAction="#setImageGlow" 
+                                       text="Glow" />
+                        <CheckMenuItem fx:id="shadowMenuEffect" 
+                                       mnemonicParsing="false" 
+                                       onAction="#setImageShadow" 
+                                       text="Shadow" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="noEffextMenu" mnemonicParsing="false" 
+                            onAction="#actionEvent1" text="No Effects" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="helpMenu" mnemonicParsing="false" 
+                        onAction="#HelpMenuAction" text="Help" />
+                  <MenuItem fx:id="aboutMenu" mnemonicParsing="false" 
+                            onAction="#aboutMenuAction" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox fx:id="box" layoutX="270.0" layoutY="16.0" maxHeight="-Infinity" 
+            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+            prefHeight="346.0" prefWidth="140.0">
+         <children>
+            <ImageView fitHeight="115.0" fitWidth="140.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Pictures/Spell.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="openExistingButtion" buttonType="RAISED" 
+                       ellipsisString="" onAction="#openExistingButtion" 
+                       prefHeight="67.0" prefWidth="145.0" 
+                       style="-fx-border-color: black;" 
+                       stylesheets="@Button.css" text="Open " 
+                       textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="createNewButton" buttonType="RAISED" 
+                       onAction="#createNewButtonAction" prefHeight="58.0" 
+                       prefWidth="140.0" style="-fx-border-color: black;" 
+                       stylesheets="@Button.css" text="Create New">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="hashValueButton" onAction="#hashValueButtonAction" 
+                       prefHeight="56.0" prefWidth="140.0" 
+                       style="-fx-border-color: black;" 
+                       stylesheets="@Button.css" text="Hash Value">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="exitButton" onAction="#exitMenuItemAction" 
+                       prefHeight="53.0" prefWidth="140.0" 
+                       style="-fx-border-color: black;" 
+                       stylesheets="@Button.css" text="Exit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fx:id="mainImageView" fitHeight="169.0" fitWidth="273.0" 
+                 layoutX="105.0" layoutY="84.0" pickOnBounds="true" 
+                 preserveRatio="true">
+         <image>
+            <Image url="@../Pictures/Dictionary.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

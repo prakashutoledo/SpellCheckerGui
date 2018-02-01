@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="-Infinity" 
+            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+            prefHeight="480.0" prefWidth="640.0" 
+            style="-fx-background-color: cyan;" 
+            xmlns="http://javafx.com/javafx/8.0.111" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="spellcheckergui.CreateOwnController">
+   <children>
+      <JFXTextArea fx:id="textField" focusColor="#020307" labelFloat="true" 
+                   layoutX="14.0" layoutY="46.0" prefHeight="111.0" 
+                   prefWidth="421.0" promptText="Enter Text of your own" 
+                   unFocusColor="#282626">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextArea>
+      <JFXHamburger fx:id="hamBurger" layoutX="573.0" layoutY="27.0" 
+                    prefHeight="20.0" prefWidth="44.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" direction="TOP" 
+                 layoutX="563.0" layoutY="55.0" prefHeight="149.0" 
+                 prefWidth="63.0">
+         <children>
+            <VBox fx:id="box" prefHeight="102.0" prefWidth="63.0">
+               <children>
+                  <JFXButton fx:id="clearButton" onAction="#clearButtonAction" 
+                             prefHeight="27.0" prefWidth="63.0" 
+                             style="-fx-border-color: Black;" 
+                             stylesheets="@Button.css" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="clearButton" onAction="#openButtonAction" 
+                             prefHeight="39.0" prefWidth="68.0" 
+                             style="-fx-border-color: Black;" 
+                             stylesheets="@Button.css" text="Open">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="mainButton" onAction="#mainButtonAction" 
+                             prefHeight="27.0" prefWidth="63.0" 
+                             style="-fx-border-color: Black;" 
+                             stylesheets="@Button.css" text="Main">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="factsButton" onAction="#factsButtonAction" 
+                             prefHeight="31.0" prefWidth="65.0" 
+                             style="-fx-border-color: black;" 
+                             stylesheets="@Button.css" text="Facts">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </JFXDrawer>
+      <JFXButton fx:id="checkButton" defaultButton="true" layoutX="445.0" 
+                 layoutY="126.0" onAction="#checkButtonActoin"
+                 prefHeight="24.0" prefWidth="71.0" 
+                 stylesheets="@Button.css" text="Check">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TextFlow fx:id="originalTextFlow" layoutX="14.0" layoutY="207.0" 
+                prefHeight="266.0" prefWidth="619.0" />
+      <Text fx:id="originalText" fontSmoothingType="LCD" layoutX="148.0" 
+            layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            text="ORIGINAL TEXT" underline="true"
+            wrappingWidth="250.0048828125">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <JFXButton fx:id="correctButon" layoutX="435.0" layoutY="118.0" 
+                 onAction="#correctButtonAction" prefHeight="39.0" 
+                 prefWidth="117.0" stylesheets="@Button.css" 
+                 text="Correct Text">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="correctedText" fontSmoothingType="LCD" layoutX="224.0" 
+            layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" 
+            text="CORRECTED TEXT" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="clickText" layoutX="110.0" layoutY="133.0" smooth="false" 
+            strokeType="OUTSIDE" strokeWidth="0.0" 
+            text="Click Correct Text button to find nearest word that matches
+ the incorrect ones!!!" textAlignment="CENTER" wrappingWidth="296.6708984375">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="saveTextButton" layoutX="448.0" layoutY="76.0" 
+                 onAction="#saveTextButtonAction" 
+                 stylesheets="@Button.css" text="Save Text">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <Text fx:id="noCorrectionText" fill="#848d59" layoutX="202.0" 
+            layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" 
+            text="No Correction Needed!!!" underline="true">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
