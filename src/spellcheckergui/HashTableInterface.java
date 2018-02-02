@@ -1,5 +1,5 @@
 package spellcheckergui;
-// Written By: Prakash Khadka and Tyler Vankainen
+// Written By: Prakash Khadka
 /* Allows user to check the words the whole document as aone and highlights the
    incorrect words and auto correct to the nearest matched words using hash 
    table.
